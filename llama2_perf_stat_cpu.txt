@@ -1,0 +1,8 @@
+num hardware threads:  4
+SIMD vector width:  16
+checkpoint size:  60816028
+Llama is an animal that lives in the forest. He likes to eat and play and run around. He also likes to look for food and make friends.
+One day, he sees a big tree with a lot of fruit. He wants to eat the fruit, but it is too high for him to reach. He thinks hard and has an idea. He runs to the tree and grabs a long stick. He tries to use the stick to get the fruit.
+But the stick is not long enough. He feels sad and tired. He says, "This stick is too long. I need to cut it and make it smaller." He looks around and sees a big rock. He pushes the rock to the tree and tries to cut it with the stick. But the rock is too heavy and the stick is too small. He tries again and again, but the rock does not move.
+He gets angry and says, "This stick is not long enough! I need to cut it!" He pulls the rock with all his might and it slips from his hand. It falls on the ground and breaks into pieces. He feels sad and says, "I'm sorry, I didn't know. I just wanted to eat
+achieved tok/s:  452.93072824156303

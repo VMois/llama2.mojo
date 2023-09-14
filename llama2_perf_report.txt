@@ -1,0 +1,237 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 4K of event 'cpu-clock:pppH'
+# Event count (approx.): 1238000000
+#
+# Overhead       Samples  Command        Shared Object         Symbol                                                                                                                                                                                                                                                        
+# ........  ............  .............  ....................  ..............................................................................................................................................................................................................................................................
+#
+    27.16%          1345  LLCL Thread 1  llama2                [.] $llama2::matmul_parallelized($llama2::Matrix,$llama2::Matrix,$llama2::Matrix,$runtime::$llcl::Runtime)_async_closure_af
+    26.53%          1314  llama2         llama2                [.] $llama2::matmul_parallelized($llama2::Matrix,$llama2::Matrix,$llama2::Matrix,$runtime::$llcl::Runtime)_async_closure_af
+    15.43%           764  llama2         llama2                [.] main
+    12.82%           635  LLCL Thread 1  [vdso]                [.] 0x00000000000006e8
+     2.22%           110  LLCL Thread 1  llama2                [.] (anonymous namespace)::WorkQueueThread::runOnThread
+     1.60%            79  llama2         [kernel.kallsyms]     [k] _raw_spin_unlock_irqrestore
+     1.37%            68  LLCL Thread 1  libstdc++.so.6.0.28   [.] std::chrono::_V2::system_clock::now
+     0.95%            47  llama2         [vdso]                [.] 0x00000000000006e8
+     0.69%            34  LLCL Thread 1  [vdso]                [.] 0x000000000000082d
+     0.59%            29  LLCL Thread 1  libc-2.31.so          [.] clock_gettime@GLIBC_2.2.5
+     0.59%            29  llama2         llama2                [.] (anonymous namespace)::WorkQueueThread::runItemsImpl<(anonymous namespace)::ThreadPoolWorkQueue::await(llvm::ArrayRef<M::LLCL::AnyAsyncValueRef>)::$_6, (anonymous namespace)::ThreadPoolWorkQueue::await(llvm::ArrayRef<M::LLCL::AnyAsyncValueRef>)::$_7>
+     0.34%            17  llama2         [kernel.kallsyms]     [k] copy_user_enhanced_fast_string
+     0.30%            15  LLCL Thread 1  [kernel.kallsyms]     [k] __softirqentry_text_start
+     0.30%            15  LLCL Thread 1  [vdso]                [.] 0x0000000000000840
+     0.30%            15  LLCL Thread 1  [vdso]                [.] 0x0000000000000872
+     0.28%            14  llama2         [kernel.kallsyms]     [k] syscall_enter_from_user_mode
+     0.26%            13  LLCL Thread 1  [vdso]                [.] 0x00000000000006ee
+     0.24%            12  LLCL Thread 1  [vdso]                [.] 0x0000000000000805
+     0.24%            12  LLCL Thread 1  [vdso]                [.] 0x0000000000000846
+     0.22%            11  LLCL Thread 1  [vdso]                [.] 0x00000000000006f1
+     0.22%            11  llama2         llama2                [.] M::LLCL::LockFreeRingBuffer<M::LLCL::WorkItem>::dequeue
+     0.20%            10  LLCL Thread 1  [vdso]                [.] 0x00000000000007bc
+     0.20%            10  LLCL Thread 1  [vdso]                [.] 0x0000000000000810
+     0.20%            10  llama2         libc-2.31.so          [.] _int_malloc
+     0.18%             9  LLCL Thread 1  [vdso]                [.] 0x00000000000007dc
+     0.16%             8  LLCL Thread 1  [vdso]                [.] 0x000000000000082a
+     0.16%             8  llama2         [kernel.kallsyms]     [k] clear_page_erms
+     0.16%             8  llama2         [kernel.kallsyms]     [k] queue_work_on
+     0.14%             7  llama2         [kernel.kallsyms]     [k] __audit_syscall_exit
+     0.14%             7  llama2         libc-2.31.so          [.] __memmove_avx_unaligned_erms
+     0.14%             7  llama2         llama2                [.] M::LLCL::LockFreeRingBuffer<M::LLCL::WorkItem>::enqueue
+     0.12%             6  LLCL Thread 1  [vdso]                [.] __vdso_clock_gettime
+     0.10%             5  llama2         [kernel.kallsyms]     [k] __kmalloc_node
+     0.10%             5  llama2         libc-2.31.so          [.] sched_getaffinity@@GLIBC_2.3.4
+     0.10%             5  llama2         libpython3.10.so.1.0  [.] _PyObject_Malloc
+     0.10%             5  llama2         libstdc++.so.6.0.28   [.] std::chrono::_V2::system_clock::now
+     0.10%             5  llama2         llama2                [.] M::KGEN::OutputChain::~OutputChain
+     0.08%             4  llama2         [kernel.kallsyms]     [k] auditd_test_task
+     0.08%             4  llama2         [kernel.kallsyms]     [k] kfree
+     0.08%             4  llama2         [vdso]                [.] 0x0000000000000840
+     0.08%             4  llama2         libc-2.31.so          [.] sched_setaffinity@@GLIBC_2.3.4
+     0.08%             4  llama2         llama2                [.] M::Detail::runWithThreadAffinityLinux
+     0.06%             3  LLCL Thread 1  [vdso]                [.] 0x00000000000007b0
+     0.06%             3  llama2         [kernel.kallsyms]     [k] copy_user_generic_unrolled
+     0.06%             3  llama2         [kernel.kallsyms]     [k] sched_setaffinity
+     0.06%             3  llama2         [vdso]                [.] 0x00000000000007b0
+     0.06%             3  llama2         libc-2.31.so          [.] cfree@GLIBC_2.2.5
+     0.06%             3  llama2         libc-2.31.so          [.] malloc
+     0.06%             3  llama2         libc-2.31.so          [.] read
+     0.06%             3  llama2         llama2                [.] llvm::detail::UniqueFunctionBase<void>::CallImpl<M::KGEN::OutputChain::executeAsTask(void (*)(signed char*), signed char*, unsigned long, bool)::$_2>
+     0.06%             3  python3        python3.10            [.] siphash24
+     0.04%             2  LLCL Thread 1  [kernel.kallsyms]     [k] __netif_receive_skb_core.constprop.0
+     0.04%             2  LLCL Thread 1  [kernel.kallsyms]     [k] slab_free_freelist_hook.constprop.0
+     0.04%             2  LLCL Thread 1  [vdso]                [.] 0x0000000000000867
+     0.04%             2  llama2         [kernel.kallsyms]     [k] __audit_syscall_entry
+     0.04%             2  llama2         [kernel.kallsyms]     [k] __cond_resched
+     0.04%             2  llama2         [kernel.kallsyms]     [k] __virt_addr_valid
+     0.04%             2  llama2         [kernel.kallsyms]     [k] __x64_sys_sched_setaffinity
+     0.04%             2  llama2         [kernel.kallsyms]     [k] atime_needs_update
+     0.04%             2  llama2         [kernel.kallsyms]     [k] common_perm_cond
+     0.04%             2  llama2         [kernel.kallsyms]     [k] copy_page_to_iter
+     0.04%             2  llama2         [kernel.kallsyms]     [k] lockref_get_not_zero
+     0.04%             2  llama2         [kernel.kallsyms]     [k] slab_free_freelist_hook.constprop.0
+     0.04%             2  llama2         [kernel.kallsyms]     [k] syscall_exit_to_user_mode_prepare
+     0.04%             2  llama2         [vdso]                [.] 0x00000000000007c0
+     0.04%             2  llama2         [vdso]                [.] 0x0000000000000872
+     0.04%             2  llama2         libc-2.31.so          [.] __memset_avx2_unaligned_erms
+     0.04%             2  llama2         libc-2.31.so          [.] __strlen_avx2
+     0.04%             2  llama2         libc-2.31.so          [.] syscall
+     0.04%             2  llama2         libc-2.31.so          [.] 0x0000000000022564
+     0.04%             2  llama2         libpthread-2.31.so    [.] sem_post@@GLIBC_2.2.5
+     0.04%             2  llama2         libpython3.10.so.1.0  [.] PyCode_NewWithPosOnlyArgs
+     0.04%             2  llama2         libpython3.10.so.1.0  [.] deduce_unreachable
+     0.04%             2  llama2         libpython3.10.so.1.0  [.] type_new
+     0.04%             2  llama2         llama2                [.] KGEN_CompilerRT_LLCL_OutputChainPtr_Destroy
+     0.04%             2  llama2         llama2                [.] KGEN_CompilerRT_LLCL_ParallelismLevel
+     0.04%             2  python3        python3.10            [.] PyCode_NewWithPosOnlyArgs
+     0.04%             2  python3        python3.10            [.] _PyObject_Malloc
+     0.04%             2  python3        python3.10            [.] dict_traverse
+     0.04%             2  python3        python3.10            [.] lookdict_unicode
+     0.04%             2  python3        python3.10            [.] lookdict_unicode_nodummy
+     0.04%             2  python3        python3.10            [.] object_dealloc
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] __siphash_unaligned
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] _raw_spin_unlock_irqrestore
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] apparmor_socket_sock_rcv_skb
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] ip_sublist_rcv
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] kfree_skbmem
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] memcpy_erms
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] netvsc_poll
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] netvsc_receive
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] netvsc_xmit
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] nf_ct_get_tuple
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] nf_hook_slow
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] nf_nat_ipv4_out
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] sock_def_readable
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] tcp_check_space
+     0.02%             1  LLCL Thread 1  [kernel.kallsyms]     [k] tcp_update_pacing_rate
+     0.02%             1  LLCL Thread 1  [vdso]                [.] 0x00000000000007b1
+     0.02%             1  LLCL Thread 1  [vdso]                [.] 0x00000000000007c0
+     0.02%             1  LLCL Thread 1  [vdso]                [.] 0x00000000000007e4
+     0.02%             1  LLCL Thread 1  libc-2.31.so          [.] _int_free
+     0.02%             1  LLCL Thread 1  llama2                [.] M::LLCL::AsyncValue::removeAnyInlineWaiter
+     0.02%             1  LLCL Thread 1  llama2                [.] llvm::detail::UniqueFunctionBase<void>::CallImpl<M::KGEN::OutputChain::executeAsTask(void (*)(signed char*), signed char*, unsigned long, bool)::$_2>
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __audit_inode
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __check_object_size
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __fget_files
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __fsnotify_parent
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __mod_lruvec_state
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __x64_sys_fcntl
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __x64_sys_gettid
+     0.02%             1  llama2         [kernel.kallsyms]     [k] __x64_sys_read
+     0.02%             1  llama2         [kernel.kallsyms]     [k] _raw_spin_lock_irqsave
+     0.02%             1  llama2         [kernel.kallsyms]     [k] alloc_cpumask_var_node
+     0.02%             1  llama2         [kernel.kallsyms]     [k] apparmor_file_permission
+     0.02%             1  llama2         [kernel.kallsyms]     [k] call_filldir
+     0.02%             1  llama2         [kernel.kallsyms]     [k] cap_safe_nice
+     0.02%             1  llama2         [kernel.kallsyms]     [k] check_stack_object
+     0.02%             1  llama2         [kernel.kallsyms]     [k] copy_from_kernel_nofault_allowed
+     0.02%             1  llama2         [kernel.kallsyms]     [k] cpuset_cpus_allowed
+     0.02%             1  llama2         [kernel.kallsyms]     [k] current_time
+     0.02%             1  llama2         [kernel.kallsyms]     [k] do_syscall_64
+     0.02%             1  llama2         [kernel.kallsyms]     [k] do_tty_write
+     0.02%             1  llama2         [kernel.kallsyms]     [k] do_user_addr_fault
+     0.02%             1  llama2         [kernel.kallsyms]     [k] filemap_get_read_batch
+     0.02%             1  llama2         [kernel.kallsyms]     [k] filemap_read
+     0.02%             1  llama2         [kernel.kallsyms]     [k] fput
+     0.02%             1  llama2         [kernel.kallsyms]     [k] fput_many
+     0.02%             1  llama2         [kernel.kallsyms]     [k] free_pcp_prepare
+     0.02%             1  llama2         [kernel.kallsyms]     [k] free_pgtables
+     0.02%             1  llama2         [kernel.kallsyms]     [k] free_unref_page
+     0.02%             1  llama2         [kernel.kallsyms]     [k] fsnotify
+     0.02%             1  llama2         [kernel.kallsyms]     [k] get_acl.part.0
+     0.02%             1  llama2         [kernel.kallsyms]     [k] handle_mm_fault
+     0.02%             1  llama2         [kernel.kallsyms]     [k] link_path_walk.part.0.constprop.0
+     0.02%             1  llama2         [kernel.kallsyms]     [k] lockref_put_return
+     0.02%             1  llama2         [kernel.kallsyms]     [k] memcg_slab_free_hook
+     0.02%             1  llama2         [kernel.kallsyms]     [k] memcg_slab_post_alloc_hook
+     0.02%             1  llama2         [kernel.kallsyms]     [k] memset_erms
+     0.02%             1  llama2         [kernel.kallsyms]     [k] mutex_trylock
+     0.02%             1  llama2         [kernel.kallsyms]     [k] next_uptodate_page
+     0.02%             1  llama2         [kernel.kallsyms]     [k] ovl_get_acl
+     0.02%             1  llama2         [kernel.kallsyms]     [k] path_put
+     0.02%             1  llama2         [kernel.kallsyms]     [k] rcu_read_unlock_strict
+     0.02%             1  llama2         [kernel.kallsyms]     [k] security_file_permission
+     0.02%             1  llama2         [kernel.kallsyms]     [k] should_failslab
+     0.02%             1  llama2         [kernel.kallsyms]     [k] str2hashbuf_signed
+     0.02%             1  llama2         [kernel.kallsyms]     [k] syscall_exit_to_user_mode
+     0.02%             1  llama2         [kernel.kallsyms]     [k] syscall_exit_work
+     0.02%             1  llama2         [kernel.kallsyms]     [k] tty_insert_flip_string_and_push_buffer
+     0.02%             1  llama2         [kernel.kallsyms]     [k] tty_paranoia_check
+     0.02%             1  llama2         [kernel.kallsyms]     [k] unmap_page_range
+     0.02%             1  llama2         [kernel.kallsyms]     [k] vm_normal_page
+     0.02%             1  llama2         [kernel.kallsyms]     [k] vsnprintf
+     0.02%             1  llama2         [kernel.kallsyms]     [k] xas_load
+     0.02%             1  llama2         [kernel.kallsyms]     [k] xattr_resolve_name
+     0.02%             1  llama2         [vdso]                [.] 0x00000000000006e0
+     0.02%             1  llama2         [vdso]                [.] 0x00000000000007f7
+     0.02%             1  llama2         [vdso]                [.] 0x00000000000007fb
+     0.02%             1  llama2         [vdso]                [.] 0x000000000000082d
+     0.02%             1  llama2         ld-2.31.so            [.] _dl_lookup_symbol_x
+     0.02%             1  llama2         ld-2.31.so            [.] _dl_relocate_object
+     0.02%             1  llama2         libc-2.31.so          [.] _IO_default_xsputn
+     0.02%             1  llama2         libc-2.31.so          [.] _IO_doallocbuf
+     0.02%             1  llama2         libc-2.31.so          [.] _IO_file_close_it@@GLIBC_2.2.5
+     0.02%             1  llama2         libc-2.31.so          [.] _IO_fread
+     0.02%             1  llama2         libc-2.31.so          [.] __GI___libc_write
+     0.02%             1  llama2         libc-2.31.so          [.] __fcntl64_nocancel_adjusted
+     0.02%             1  llama2         libc-2.31.so          [.] __gconv_transform_utf8_internal
+     0.02%             1  llama2         libc-2.31.so          [.] _int_free
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] PyFunction_NewWithQualName
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] PyType_Ready
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] _PyEval_EvalFrameDefault
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] _PyFunction_Vectorcall
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] _PyObject_GetMethod
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] _imp__fix_co_filename.cold.1984
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] func_get_name
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] lookdict_unicode
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] lookdict_unicode_nodummy
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] module_getattro
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] r_object
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] solid_base
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] tupledealloc
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] unicode_concatenate
+     0.02%             1  llama2         libpython3.10.so.1.0  [.] unicode_decode_utf8
+     0.02%             1  llama2         llama2                [.] (anonymous namespace)::ThreadPoolWorkQueue::await
+     0.02%             1  llama2         llama2                [.] KGEN_CompilerRT_AlignedAlloc
+     0.02%             1  llama2         llama2                [.] KGEN_CompilerRT_LLCL_OutputChainPtr_GetRuntime
+     0.02%             1  llama2         llama2                [.] M::LLCL::Globals::getRuntime
+     0.02%             1  llama2         llama2                [.] M::LLCL::TypeID::getValueDestructor
+     0.02%             1  llama2         llama2                [.] M::LLCL::UnknownLocationDecoder::addRef
+     0.02%             1  llama2         llama2                [.] M::LLCL::UnknownLocationDecoder::dropRef
+     0.02%             1  llama2         llama2                [.] M::LLCL::runWithThreadAffinity
+     0.02%             1  python3        [kernel.kallsyms]     [k] __mod_node_page_state
+     0.02%             1  python3        [kernel.kallsyms]     [k] ksys_mmap_pgoff
+     0.02%             1  python3        [kernel.kallsyms]     [k] link_path_walk.part.0.constprop.0
+     0.02%             1  python3        [kernel.kallsyms]     [k] ovl_permission
+     0.02%             1  python3        ld-2.31.so            [.] _dl_relocate_object
+     0.02%             1  python3        libc-2.31.so          [.] __memset_avx2_unaligned_erms
+     0.02%             1  python3        libc-2.31.so          [.] __wcslen_avx2
+     0.02%             1  python3        libc-2.31.so          [.] malloc
+     0.02%             1  python3        libc-2.31.so          [.] unlink_chunk.isra.0
+     0.02%             1  python3        libpthread-2.31.so    [.] __pthread_mutex_lock
+     0.02%             1  python3        python3.10            [.] PyObject_GC_UnTrack
+     0.02%             1  python3        python3.10            [.] PyObject_Str
+     0.02%             1  python3        python3.10            [.] PyUnicode_InternFromString
+     0.02%             1  python3        python3.10            [.] _PyEval_EvalFrameDefault
+     0.02%             1  python3        python3.10            [.] _Py_NewReference
+     0.02%             1  python3        python3.10            [.] _imp__fix_co_filename
+     0.02%             1  python3        python3.10            [.] dict_pop
+     0.02%             1  python3        python3.10            [.] find_name_in_mro
+     0.02%             1  python3        python3.10            [.] frame_dealloc
+     0.02%             1  python3        python3.10            [.] gc_collect_main
+     0.02%             1  python3        python3.10            [.] intern_string_constants
+     0.02%             1  python3        python3.10            [.] meth_traverse
+     0.02%             1  python3        python3.10            [.] method_vectorcall_FASTCALL
+     0.02%             1  python3        python3.10            [.] type_mro_modified
+     0.02%             1  python3        python3.10            [.] type_ready
+     0.02%             1  python3        python3.10            [.] unicode_dealloc
+     0.02%             1  python3        python3.10            [.] unicode_decode_utf8
+     0.02%             1  python3        python3.10            [.] update_one_slot
+     0.02%             1  python3        python3.10            [.] visit_decref
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
